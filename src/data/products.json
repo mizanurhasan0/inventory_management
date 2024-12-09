@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "product name",
+        "photo": "",
+        "description": "Description",
+        "price": 1200,
+        "category": {
+            "id": 1,
+            "name": "Cat-1"
+        },
+        "stock": 10,
+        "sold": 5,
+        "supplier": {
+            "id": 1,
+            "name": "sup-1"
+        },
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    },
+    {
+        "id": 2,
+        "name": "product name",
+        "photo": "",
+        "description": "Description",
+        "price": 1200,
+        "category": {
+            "id": 1,
+            "name": "Cat-1"
+        },
+        "stock": 10,
+        "sold": 5,
+        "supplier": {
+            "id": 1,
+            "name": "sup-1"
+        },
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    },
+    {
+        "id": 3,
+        "name": "product name",
+        "photo": "",
+        "description": "Description",
+        "price": 1200,
+        "category": {
+            "id": 1,
+            "name": "Cat-1"
+        },
+        "stock": 10,
+        "sold": 5,
+        "supplier": {
+            "id": 1,
+            "name": "sup-1"
+        },
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    }
+]
