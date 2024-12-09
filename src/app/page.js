@@ -1,8 +1,9 @@
+import Dashbord from "./dashboard/Dashbord";
 
 export default function Home() {
   return (
-   <div>
-    <p>hit</p>
-   </div>
+    <div>
+      <Dashbord />
+    </div>
   );
 }

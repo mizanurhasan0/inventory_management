@@ -5,7 +5,7 @@ import React from 'react';
 const menu = [
     { id: 1, name: "Dashboard", icon: "/icons/dashboard.svg", src: "/" },
     { id: 2, name: "Suppliers", icon: "/icons/supplier.svg", src: "/supplier" },
-    { id: 3, name: "Sales Orders", icon: "/icons/order.svg", src: "/order" },
+    { id: 3, name: "Sales Orders", icon: "/icons/order.svg", src: "/sales" },
     { id: 4, name: "Purchase Orders", icon: "/icons/purchase.svg", src: "/purchase" },
 ]
 
