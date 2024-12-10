@@ -8,7 +8,7 @@ export default function Dashbord() {
     const sortData = data.map((item) => ({
         id: item.id,
         product: item.name,
-        photo: item.photo,
+        image: item.image,
         description: item.description,
         price: item.price,
         category: item.category.name,
@@ -25,18 +25,10 @@ export default function Dashbord() {
                 <Card />
             </div>
             <div>
-                <h2 className="text-xl py-4 font-semibold">Stock count</h2>
+                <h2 className="text-xl py-4 mt-10 font-semibold">Stock count</h2>
                 <div>
-                    <Tbl header="stockCount" data={sortData}>
-                        {/* {data.map((p) => (
-                            <tr key={p.id} className="capitalize">
-                                <td className="py-2 border px-2">{p.image}</td>
-                                <td className="py-2 border px-2">{p.name}</td>
-                                <td className="py-2 border px-2">{p.stock}</td>
-                                <td className="py-2 border px-2">{p.sold}</td>
-                            </tr>
-                        ))} */}
-                    </Tbl>
+                    <Tbl header="stockCount" data={sortData} />
+
                 </div>
             </div>
         </div>

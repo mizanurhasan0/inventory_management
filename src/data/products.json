@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "product name",
-        "photo": "",
+        "image": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?cs=srgb&dl=pexels-madebymath-90946.jpg&fm=jpg",
         "description": "Description",
         "price": 1200,
         "category": {
@@ -20,7 +20,7 @@
     {
         "id": 2,
         "name": "product name",
-        "photo": "",
+        "image": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?cs=srgb&dl=pexels-madebymath-90946.jpg&fm=jpg",
         "description": "Description",
         "price": 1200,
         "category": {
@@ -38,7 +38,7 @@
     {
         "id": 3,
         "name": "product name",
-        "photo": "",
+        "image": "https://www.thedotstore.com/wp-content/uploads/sites/1417/2023/11/image-17.jpeg",
         "description": "Description",
         "price": 1200,
         "category": {
