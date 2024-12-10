@@ -1,18 +1,25 @@
 import React from 'react'
 import Card from './comp/Card'
 import Search from '@/components/search/Search'
+import Btn from '@/components/btn/Btn'
+import Title from '@/components/title/TItle'
+import FakeData from "@/data/supplier.json"
 
 export default function page() {
+    const data = FakeData;
     return (
         <div className="container mx-auto">
-            <h1 className="text-2xl font-semibold py-6">Supplier</h1>
-            <div>
-                <Search />
+            <Title name="suppliers" />
+            <div className="flex items-center space-x-4 pb-5">
+                <div className="w-full">
+                    <Search />
+                </div>
+                <Btn className="bg-green_base text-white whitespace-nowrap">Add supplier</Btn>
             </div>
-            <div className="grid grid-cols-4 gap-5">
-                {[1, 2, 3, 4, 5, 6].map((c, i) => (
+            <div className="grid grid-cols-3 xl:grid-cols-4 gap-5">
+                {data.map((d, i) => (
                     <div key={i}>
-                        <Card />
+                        <Card data={d} />
                     </div>
                 ))}
             </div>

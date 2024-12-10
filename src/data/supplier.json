@@ -1,0 +1,104 @@
+[
+    {
+        "id": 1,
+        "name": "Bata",
+        "contact": {
+            "phone": "01818674298",
+            "email": "eng.mizanur.hasan@gmail.com"
+        },
+        "address": "Mirpur-12, Dhaka-1216",
+        "productsSupplied": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    },
+    {
+        "id": 2,
+        "name": "Easy",
+        "contact": {
+            "phone": "01818674298",
+            "email": "easy@gmail.com"
+        },
+        "address": "Mirpur-12, Dhaka-1216",
+        "productsSupplied": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    },
+    {
+        "id": 3,
+        "name": "Rich man",
+        "contact": {
+            "phone": "01818674298",
+            "email": "rich@gmail.com"
+        },
+        "address": "Mirpur-12, Dhaka-1216",
+        "productsSupplied": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    },
+    {
+        "id": 4,
+        "name": "Evaly",
+        "contact": {
+            "phone": "01818674298",
+            "email": "evaly@gmail.com"
+        },
+        "address": "Mirpur-12, Dhaka-1216",
+        "productsSupplied": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    },
+    {
+        "id": 5,
+        "name": "Daraz",
+        "contact": {
+            "phone": "01818674298",
+            "email": "eng.mizanur.hasan@gmail.com"
+        },
+        "address": "Mirpur-12, Dhaka-1216",
+        "productsSupplied": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    },
+    {
+        "id": 6,
+        "name": "Skype",
+        "contact": {
+            "phone": "01818674298",
+            "email": "eng.mizanur.hasan@gmail.com"
+        },
+        "address": "Mirpur-12, Dhaka-1216",
+        "productsSupplied": [
+            1,
+            2,
+            3,
+            4,
+            5
+        ],
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    }
+]
