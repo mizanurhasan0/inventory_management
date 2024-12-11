@@ -3,10 +3,17 @@ import React from 'react';
 import Input_Label from '@/components/input/Input_Label';
 import Btn from '@/components/btn/Btn';
 
+const validField = new Set(["name", "brand", "email", "mobile"]);
 export default function AddSupply({ onClose = () => { } }) {
     const onSubmit = (e) => {
-        e.preventDefault()
-        console.log(e)
+        e.preventDefault();
+        const fd = new FormData(e.target);
+        const data = Object.fromEntries(fd);
+        const valid = Object.keys(data).every((k) => validField.has(k) && data[k].trim());
+
+        if (!valid) return console.error('field error');
+        const formattedData = { brand: data.brand, name: data.name, contact: { email: data.email, mobile: data.mobile } };
+        console.log(formattedData);
     }
     return (
         <div>
