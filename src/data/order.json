@@ -1,0 +1,118 @@
+[
+    {
+        "id": 1,
+        "orderId": "user01",
+        "userId": {
+            "id": 1,
+            "email": "user@gmail.com"
+        },
+        "products": [
+            {
+                "productId": {
+                    "id": 1,
+                    "name": "product name"
+                },
+                "qty": 2,
+                "price": 300
+            },
+            {
+                "productId": {
+                    "id": 2,
+                    "name": "product name 2"
+                },
+                "qty": 1,
+                "price": 100
+            }
+        ],
+        "totalAmount": 400,
+        "status": "pending",
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    },
+    {
+        "id": 2,
+        "orderId": "admin02",
+        "userId": {
+            "id": 1,
+            "email": "admin@gmail.com"
+        },
+        "products": [
+            {
+                "productId": {
+                    "id": 1,
+                    "name": "product name"
+                },
+                "qty": 2,
+                "price": 300
+            },
+            {
+                "productId": {
+                    "id": 2,
+                    "name": "product name 2"
+                },
+                "qty": 1,
+                "price": 100
+            }
+        ],
+        "totalAmount": 400,
+        "status": "deliver",
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    },
+    {
+        "id": 1,
+        "orderId": "supplier01",
+        "userId": {
+            "id": 1,
+            "email": "supplier@gmail.com"
+        },
+        "products": [
+            {
+                "productId": {
+                    "id": 1,
+                    "name": "product name"
+                },
+                "qty": 2,
+                "price": 300
+            },
+            {
+                "productId": {
+                    "id": 2,
+                    "name": "product name 2"
+                },
+                "qty": 1,
+                "price": 100
+            }
+        ],
+        "totalAmount": 400,
+        "status": "pending",
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    },
+    {
+        "id": 1,
+        "orderId": "gen01",
+        "userId": {
+            "id": 1,
+            "email": "gen@gmail.com"
+        },
+        "products": [
+            {
+                "productId": {
+                    "id": 1,
+                    "name": "product name"
+                },
+                "qty": 2,
+                "price": 300
+            },
+            {
+                "productId": {
+                    "id": 2,
+                    "name": "product name 2"
+                },
+                "qty": 1,
+                "price": 100
+            }
+        ],
+        "totalAmount": 400,
+        "status": "pending",
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    }
+]
