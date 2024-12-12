@@ -1,7 +1,8 @@
 [
     {
         "id": 1,
-        "name": "Bata",
+        "brand": "Bata",
+        "name": "Mery K",
         "contact": {
             "phone": "01818674298",
             "email": "eng.mizanur.hasan@gmail.com"
@@ -18,7 +19,8 @@
     },
     {
         "id": 2,
-        "name": "Easy",
+        "brand": "Easy",
+        "name": "Mery K",
         "contact": {
             "phone": "01818674298",
             "email": "easy@gmail.com"
@@ -35,7 +37,8 @@
     },
     {
         "id": 3,
-        "name": "Rich man",
+        "brand": "Rich man",
+        "name": "Mery K",
         "contact": {
             "phone": "01818674298",
             "email": "rich@gmail.com"
@@ -52,7 +55,8 @@
     },
     {
         "id": 4,
-        "name": "Evaly",
+        "brand": "Evaly",
+        "name": "Mery K",
         "contact": {
             "phone": "01818674298",
             "email": "evaly@gmail.com"
@@ -86,7 +90,8 @@
     },
     {
         "id": 6,
-        "name": "Skype",
+        "brand": "Skype",
+        "name": "Mery K",
         "contact": {
             "phone": "01818674298",
             "email": "eng.mizanur.hasan@gmail.com"

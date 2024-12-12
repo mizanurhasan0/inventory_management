@@ -6,12 +6,13 @@ const Ctx = createContext();
 
 export default function SupplyCtx({ children }) {
     const [listSupply, setListSupply] = useState([]);
+    const [openFrm, setOpenFrm] = useState(false);
     useEffect(() => {
         setListSupply(fkData);
     }, []);
 
     return (
-        <Ctx.Provider value={{ listSupply }}>
+        <Ctx.Provider value={{ listSupply, setListSupply, openFrm, setOpenFrm }}>
             {children}
         </Ctx.Provider>
     )
