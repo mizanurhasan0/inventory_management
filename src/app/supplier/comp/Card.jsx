@@ -22,7 +22,7 @@ export default function Card({ data }) {
             <p className="text-sm text-gray_base">{data.name}</p>
             <div className="flex items-center space-x-1 text-gray_base">
                 <Img src='/icons/email.svg' className="w-5 h-5" />
-                <p className="lowercase truncate">{data.contact.email}</p>
+                <p className="lowercase truncate">{data?.contact?.email}</p>
             </div>
             <p className="flex items-center text-gray_base font-medium space-x-1">
                 <Img src='/icons/location.svg' className="w-5 h-5" />

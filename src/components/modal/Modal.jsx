@@ -11,7 +11,7 @@ export default function Modal({ title = "Title", show = true, onClose = () => { 
                             <h2 className="text-xl capitalize font-semibold text-green_base tracking-wide">{title}
                             </h2>
                             <div onClick={onClose}>
-                                <Img src='/icons/cross.svg' className="w-7 h-7" />
+                                <Img src='/icons/cross.svg' className="w-7 h-7 cursor-pointer" />
                             </div>
                         </div>
                         {children}
