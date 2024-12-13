@@ -10,7 +10,7 @@
             {
                 "productId": {
                     "id": 1,
-                    "name": "product name"
+                    "name": "product  v v vew vew web webwe bwe bew bwegh egewgewgew gew gwe"
                 },
                 "qty": 2,
                 "price": 300
@@ -93,24 +93,7 @@
             "id": 1,
             "email": "gen@gmail.com"
         },
-        "products": [
-            {
-                "productId": {
-                    "id": 1,
-                    "name": "product name"
-                },
-                "qty": 2,
-                "price": 300
-            },
-            {
-                "productId": {
-                    "id": 2,
-                    "name": "product name 2"
-                },
-                "qty": 1,
-                "price": 100
-            }
-        ],
+        "products": [],
         "totalAmount": 400,
         "status": "pending",
         "createdAt": "2024-12-09T18:38:15.026Z"
