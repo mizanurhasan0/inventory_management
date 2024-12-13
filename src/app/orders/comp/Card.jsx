@@ -3,17 +3,17 @@ import { useRouter } from 'next/navigation'
 import React from 'react'
 import { useOrderCtx } from '../context/OrderCtx';
 
-const status = { "new": "bg-[#3366ff]", "pending": "bg-[#f9f50d]", "shipped": "bg-[#33fdff]", "deliver": "bg-[#33ff4b]" };
 
 export default function Card({ data }) {
     const navigate = useRouter();
-    const { setOpenFrm } = useOrderCtx();
+    const { setOpenFrm, orderStatus } = useOrderCtx();
 
     const onUpdateModal = () => {
         navigate.push(`/orders?id=${data.id}`);
         setOpenFrm((prev) => !prev);
     }
-    const itemCount = data.products.reduce((prev, cur) => prev += cur.qty, 0);
+
+    const itemCount = data?.products?.reduce((prev, cur) => prev += cur.qty, 0);
 
     return (
         <div className="border shadow-lg p-4 space-y-4 max-w-96 rounded-lg overflow-hidden capitalize text-gray_base">
@@ -27,7 +27,7 @@ export default function Card({ data }) {
                 <Img src='/icons/email.svg' className="w-5 h-5 opacity-60" />
                 <p className="text-sm text-gray_base lowercase">{data.userId.email}</p>
             </div>
-            <p className={`${status[data?.status]} bg-opacity-50 text-green_base rounded-md inline-block px-2 shadow-sm`}>{data?.status}</p>
+            <p className={`${orderStatus[data?.status]} bg-opacity-50 text-green_base rounded-md inline-block px-2 shadow-sm border`}>{data?.status}</p>
             <div>
                 <p className="">Order Date</p>
                 <p>{new Date(data.createdAt).toLocaleString()}</p>
@@ -35,7 +35,7 @@ export default function Card({ data }) {
             <div>
                 <h4>order items</h4>
                 <div className="flex items-center justify-between space-x-2">
-                    {data?.products.length > 0 ? (
+                    {data?.products?.length > 0 ? (
                         <>
                             <p className="font- border rounded-md inline-block p-1 truncate">{data?.products[0].productId.name}</p>
                             <p className="border p-1 rounded-md font-semibold">+{data.products.length}</p>
@@ -44,7 +44,7 @@ export default function Card({ data }) {
                 </div>
 
             </div>
-            <p>Items count: {itemCount}</p>
+            <p>Items count: {itemCount || 0}</p>
             <p>Sales order id : {data.orderId}</p>
 
         </div>

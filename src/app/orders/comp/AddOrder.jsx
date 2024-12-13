@@ -1,18 +1,13 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Input_Label from '@/components/input/Input_Label';
 import Btn from '@/components/btn/Btn';
-import { useRouter, useSearchParams } from 'next/navigation';
 import { useOrderCtx } from '../context/OrderCtx';
 
-const validField = new Set(["name", "brand", "email", "mobile", "address"]);
+const validField = new Set(["email"]);
 
 export default function AddOrder({ onClose = () => { } }) {
-    const [updateData, setUpdateData] = useState(null);
-    const { setListSupply, listSupply } = useOrderCtx();
-    const searchParams = useSearchParams()
-    const id = searchParams.get('id')
-    const { push } = useRouter();
+    const { setListOrder } = useOrderCtx();
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -21,28 +16,25 @@ export default function AddOrder({ onClose = () => { } }) {
         const valid = Object.keys(data).every((k) => validField.has(k) && data[k].trim());
 
         if (!valid) return console.error('field error');
-        const formattedData = { brand: data.brand, name: data.name, contact: { email: data.email, mobile: data.mobile }, address: data.address };
-        setListSupply((prev) => {
-            if (!updateData) return [...prev, formattedData];
-            return prev.map((item) => item.id === updateData.id ? { id: updateData.id, ...formattedData } : item)
-        })
+        const formattedData = {
+            email: data.email,
+            id: 10,
+            userId: {
+                "id": 1,
+                "email": "user@gmail.com"
+            },
+            "totalAmount": 0,
+            "status": "new",
+        };
+        setListOrder((prev) => ([...prev, formattedData]));
     }
-    useEffect(() => {
-        if (id) {
-            const supplier = listSupply.find((d) => d.id.toString() === id);
-            supplier ? setUpdateData(supplier) : push('/supplier');
-        }
-    }, [id]);
+
     return (
         <form onSubmit={onSubmit} className="space-y-2">
-            <Input_Label lbl="Supplier name *" name="brand" defaultValue={updateData?.brand} />
-            <Input_Label lbl="Owner name *" name="name" defaultValue={updateData?.name} />
-            <Input_Label lbl="Supplier email *" name="email" defaultValue={updateData?.contact.email} />
-            <Input_Label lbl="Supplier number *" name="mobile" defaultValue={updateData?.contact.phone} />
-            <Input_Label lbl="Supplier address *" name="address" defaultValue={updateData?.address} />
+            <Input_Label lbl="Customer email *" name="email" />
             <div className="flex items-center space-x-2 justify-end">
                 <Btn onClick={onClose}>Cancel</Btn>
-                <Btn type="submit" className="bg-yellow-500 text-green_base">{updateData ? 'Update' : 'Add'}</Btn>
+                <Btn type="submit" className="bg-yellow-500 text-green_base"> Create</Btn>
             </div>
         </form>
     )

@@ -9,7 +9,7 @@ import AddOrder from './AddOrder'
 import { useOrderCtx } from '../context/OrderCtx'
 
 export default function OrderWrapper() {
-  const { openFrm, setOpenFrm } = useOrderCtx();
+  const { openFrm, setOpenFrm, orderStatus } = useOrderCtx();
   const { push } = useRouter();
 
   const onCloseModal = () => {
@@ -26,6 +26,15 @@ export default function OrderWrapper() {
           <Btn
             onClick={onCloseModal}
             className="bg-green_base text-white whitespace-nowrap">Create order</Btn>
+        </div>
+        {/* Other status */}
+        <div className="pb-8 text-gray_deep space-y-2">
+          <h4 className="font-medium">Order status</h4>
+          <div className="flex items-center space-x-4">
+            {Object.keys(orderStatus).map((k, i) => (
+              <button key={i} className="capitalize border  px-2 py-1  rounded-md cursor-pointer">{k}</button>
+            ))}
+          </div>
         </div>
         {/* Supplier list components */}
         <OrderList />
