@@ -15,8 +15,8 @@ export default function Tbl({ children, header = "usrs", data, action = false })
             </thead>
             <tbody>
                 {/* {children} */}
-                {data.map((p) => (
-                    <tr key={p.id} className="capitalize text-gray_base">
+                {data?.length > 0 && data?.map((p, i) => (
+                    <tr key={i} className="capitalize text-gray_base">
                         {TblHeader[header].map((h, i) => (
                             <td key={i} className="py-2 border px-2">
                                 {h === 'image' ? (

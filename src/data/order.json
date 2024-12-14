@@ -10,7 +10,8 @@
             {
                 "productId": {
                     "id": 1,
-                    "name": "product  v v vew vew web webwe bwe bew bwegh egewgewgew gew gwe"
+                    "name": "product  v v vew vew web webwe bwe bew bwegh egewgewgew gew gwe",
+                    "price": 150
                 },
                 "qty": 2,
                 "price": 300
@@ -18,7 +19,8 @@
             {
                 "productId": {
                     "id": 2,
-                    "name": "product name 2"
+                    "name": "product name 2",
+                    "price": 100
                 },
                 "qty": 1,
                 "price": 100
@@ -39,7 +41,8 @@
             {
                 "productId": {
                     "id": 1,
-                    "name": "product name"
+                    "name": "product name",
+                    "price": 150
                 },
                 "qty": 2,
                 "price": 300
@@ -47,7 +50,8 @@
             {
                 "productId": {
                     "id": 2,
-                    "name": "product name 2"
+                    "name": "product name 2",
+                    "price": 100
                 },
                 "qty": 1,
                 "price": 100
@@ -68,7 +72,8 @@
             {
                 "productId": {
                     "id": 1,
-                    "name": "product name"
+                    "name": "product name",
+                    "price": 150
                 },
                 "qty": 2,
                 "price": 300
@@ -76,7 +81,8 @@
             {
                 "productId": {
                     "id": 2,
-                    "name": "product name 2"
+                    "name": "product name 2",
+                    "price": 100
                 },
                 "qty": 1,
                 "price": 100
@@ -94,7 +100,7 @@
             "email": "gen@gmail.com"
         },
         "products": [],
-        "totalAmount": 400,
+        "totalAmount": 0,
         "status": "pending",
         "createdAt": "2024-12-09T18:38:15.026Z"
     }
