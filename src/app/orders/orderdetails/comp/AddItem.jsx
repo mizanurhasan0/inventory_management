@@ -1,7 +1,6 @@
 import React from 'react';
 import Tbl from '@/components/table/Tbl';
 import Search from '@/components/search/Search';
-import Btn from '@/components/btn/Btn';
 
 export default function AddItem({ data }) {
     console.log(data);
