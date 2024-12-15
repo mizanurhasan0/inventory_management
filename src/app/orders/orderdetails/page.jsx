@@ -1,7 +1,7 @@
 'use client'
 import { useSearchParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
-import fkData from '@/data/order';
+import fkOrder from '@/data/order';
 import Btn from '@/components/btn/Btn';
 import { useOrderCtx } from '../context/OrderCtx';
 import AddItem from './comp/AddItem';
@@ -12,20 +12,37 @@ export default function OrderDetails() {
     const id = query.get('id');
     const [detail, setDetail] = useState(null);
 
+
+
     useEffect(() => {
         setDetail(() => {
-            let dt = fkData.find((ord) => ord.id.toString() === id);
+            let dt = fkOrder.find((ord) => ord.id.toString() === id);
             if (dt) {
                 dt.products = dt.products.map((p) => ({ 'id': p?.productId?.id, "product": p?.productId?.name, 'price per item': p?.productId?.price, 'total price': p.price, ...p }));
             }
             return dt || {};
         });
     }, []);
+
+    const getDateFormate = (d) => {
+        const dt = new Date(d).toLocaleDateString();
+        const t = new Date(d).toLocaleTimeString();
+        return `${dt} - ${t}`
+    }
+    // console.log(orderStatus);
+    const onUpdateState = () => {
+        // update status
+        const getStatus = Object.keys(orderStatus);
+        let idx = getStatus.findIndex((k) => k === detail.status);
+        setDetail((prev) => ({ ...prev, status: (getStatus.length - 1) === idx ? getStatus[0] : getStatus[idx + 1] }))
+        // console.log(getStatus.length);
+
+    }
+    // console.log(detail);
     return (
         <div className="container mx-auto py-5">
             <div className="pb-10">
                 <h1 className="capitalize text-2xl font-semibold">
-                    {/* {detail?.products.reduce((prev, curr) => prev = prev !== '' ? prev + ',' + curr.productId.name : curr.productId.name, '')} */}
                     {detail?.products.map((item) => item?.product).join(',') || '-'}
                 </h1>
             </div>
@@ -45,7 +62,7 @@ export default function OrderDetails() {
                     </tr>
                     <tr className="border border-x-0 border-t-0">
                         <td className="py-5 px-2">Order date</td>
-                        <td className=" inline-block px-2 py-1 rounded-md mt-4">{detail?.createdAt}</td>
+                        <td className=" inline-block px-2 py-1 rounded-md mt-4">{getDateFormate(detail?.createdAt)}</td>
                     </tr>
                     <tr className="border border-x-0 border-t-0">
                         <td className="py-5 px-2">Total amount</td>
@@ -62,11 +79,11 @@ export default function OrderDetails() {
                 </tbody>
             </table>
             <div className="flex space-x-2 py-5">
-                <Btn className="bg-green_base text-white">Update Status</Btn>
+                <Btn className="bg-green_base text-white" onClick={onUpdateState}>Update Status</Btn>
                 <Btn>Delete order</Btn>
             </div>
             <div className="py-10">
-                <AddItem data={detail?.products} />
+                <AddItem data={detail?.products} setData={setDetail} />
             </div>
         </div>
     )
