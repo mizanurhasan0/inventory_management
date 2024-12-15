@@ -3,9 +3,9 @@ import Link from 'next/link';
 import React from 'react'
 
 const category = [
-    { id: 1, name: "Sales orders", icon: "/icons/orderwhite.svg", src: "/sales", desc: "Manage customer purchases and track sold items." },
+    { id: 1, name: "Sales orders", icon: "/icons/orderwhite.svg", src: "/orders", desc: "Manage customer purchases and track sold items." },
     { id: 2, name: "Purchase orders", icon: "/icons/purchasewhite.svg", src: "/purchase", desc: "Request and track item restocks from your suppliers" },
-    { id: 3, name: "Sales orders", icon: "/icons/supplierwhite.svg", src: "/supplier", desc: "Keep detailed records of your suppliers" }];
+    { id: 3, name: "Suppliers", icon: "/icons/supplierwhite.svg", src: "/supplier", desc: "Keep detailed records of your suppliers" }];
 
 
 export default function Card() {

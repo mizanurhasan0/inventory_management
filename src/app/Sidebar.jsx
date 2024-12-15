@@ -18,8 +18,8 @@ export default function Sidebar() {
                     <Link href={"/"} className="p-2 bg-green_mid rounded-md">
                         <Img src={'/icons/inventory.svg'} className="w-8 h-8" />
                     </Link>
-                    <Link href={"/"} className="bg-orange_deep rounded-full overflow-hidden w-10 h-10 flex items-center justify-center">
-                        <Img src={'/icons/user.svg'} className="w-6 h-6" />
+                    <Link href={"/"} className="bg-orange_deep rounded-full overflow-hidden w-10 h-10 flex items-center justify-center border border-green_base">
+                        <Img src={'/imgs/user.jpg'} className="object-fill" />
                     </Link>
                 </div>
 
