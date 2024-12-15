@@ -32,10 +32,11 @@ export default function OrderDetails() {
     // console.log(orderStatus);
     const onUpdateState = () => {
         // update status
-        const getStatus = Object.keys(orderStatus);
-        let idx = getStatus.findIndex((k) => k === detail.status);
-        setDetail((prev) => ({ ...prev, status: (getStatus.length - 1) === idx ? getStatus[0] : getStatus[idx + 1] }))
-        // console.log(getStatus.length);
+        setDetail((prev) => {
+            const statuses = Object.keys(orderStatus);
+            const nextIdx = (statuses.indexOf(prev.status) + 1) % statuses.length;
+            return { ...prev, status: statuses[nextIdx] };
+        });
 
     }
     // console.log(detail);
