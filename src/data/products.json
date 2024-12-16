@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "code": "code1",
         "name": "product name",
         "image": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?cs=srgb&dl=pexels-madebymath-90946.jpg&fm=jpg",
         "description": "Description",
@@ -19,6 +20,7 @@
     },
     {
         "id": 2,
+        "code": "code2",
         "name": "product name",
         "image": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?cs=srgb&dl=pexels-madebymath-90946.jpg&fm=jpg",
         "description": "Description",
@@ -37,6 +39,7 @@
     },
     {
         "id": 3,
+        "code": "code3",
         "name": "update name",
         "image": "https://www.thedotstore.com/wp-content/uploads/sites/1417/2023/11/image-17.jpeg",
         "description": "Description",

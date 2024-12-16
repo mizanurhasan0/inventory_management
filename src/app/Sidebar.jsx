@@ -6,7 +6,7 @@ const menu = [
     { id: 1, name: "Dashboard", icon: "/icons/dashboard.svg", src: "/" },
     { id: 2, name: "Suppliers", icon: "/icons/supplier.svg", src: "/supplier" },
     { id: 3, name: "Sales Orders", icon: "/icons/order.svg", src: "/orders" },
-    { id: 4, name: "Purchase Orders", icon: "/icons/purchase.svg", src: "/purchase" },
+    { id: 4, name: "Products", icon: "/icons/purchase.svg", src: "/products" },
 ]
 
 export default function Sidebar() {
