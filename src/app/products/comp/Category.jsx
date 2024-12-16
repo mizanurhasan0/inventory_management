@@ -29,7 +29,7 @@ export default function Category() {
                 </form>
             </div>
             <div className="flex-1">
-                <Tbl header='category' data={fkCategory} />
+                <Tbl header='category' data={fkCategory} action={true} />
             </div>
         </div>
     )
