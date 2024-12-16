@@ -6,7 +6,7 @@ const Ctx = createContext();
 
 export default function ProudctCtx({ children }) {
     const [products, setProducts] = useState([]);
-    const [curTab, setCurTab] = useState(0);
+    const [curTab, setCurTab] = useState(2);
 
     const onTab = (idx) => {
         setCurTab(idx);

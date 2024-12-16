@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Category 1",
+        "image": "https://www.thedotstore.com/wp-content/uploads/sites/1417/2023/11/image-17.jpeg",
+        "description": "Katal, Rooi fish, Deshi"
+    },
+    {
+        "id": 2,
+        "name": "Category 2",
+        "image": "https://www.thedotstore.com/wp-content/uploads/sites/1417/2023/11/image-17.jpeg",
+        "description": "Katal, Rooi fish, Deshi"
+    },
+    {
+        "id": 3,
+        "name": "Category 3",
+        "image": "https://www.thedotstore.com/wp-content/uploads/sites/1417/2023/11/image-17.jpeg",
+        "description": "Ball, Tools , Deshi"
+    },
+    {
+        "id": 4,
+        "name": "Category 4",
+        "image": "https://www.thedotstore.com/wp-content/uploads/sites/1417/2023/11/image-17.jpeg",
+        "description": "Shop, fresh wash, fish, Deshi"
+    },
+    {
+        "id": 5,
+        "name": "Category 5",
+        "image": "https://www.thedotstore.com/wp-content/uploads/sites/1417/2023/11/image-17.jpeg",
+        "description": "Katal, Rooi fish, Deshi"
+    }
+]

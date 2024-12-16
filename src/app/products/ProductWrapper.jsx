@@ -15,7 +15,7 @@ export default function ProductWrapper() {
     const { onTab, curTab } = useProductCtx();
 
     return (
-        <div className="">
+        <div className="container mx-auto">
             <Title name="Products" />
             <div className="">
                 {/* Tab Navigation */}
