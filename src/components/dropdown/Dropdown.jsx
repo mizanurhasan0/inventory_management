@@ -2,12 +2,13 @@
 import Image from 'next/image';
 import React, { useState } from 'react'
 import { useRef } from 'react'
+import Img from '../img/Img';
 
-export default function Dropdown({ lbl = "select ", placeholder = "Select ..." }) {
+export default function Dropdown({ lbl = "select ", placeholder = "Select ...", name = "", opts = [] }) {
     const refMenu = useRef();
     const arrowRef = useRef();
 
-    const [selectOpt, setSelectOpt] = useState();
+    const [selectOpt, setSelectOpt] = useState(null);
 
     const onOpen = () => {
         const check = refMenu.current.className.includes('invisible');
@@ -27,26 +28,24 @@ export default function Dropdown({ lbl = "select ", placeholder = "Select ..." }
                     <input className="flex-1 px-2 h-full w-full outline-0 leading-6 capitalize cursor-pointer" type="text" name="search" placeholder={placeholder}
                         onClick={onOpen}
                         autoComplete='off'
-                        value={selectOpt}
+                        value={selectOpt?.name || ''}
+                        onChange={() => { }}
                     />
-                    <Image ref={arrowRef} src='./icons/downArrow.svg' alt='upload icon' width={20} height={20} className="mr-2 rotate-180 transition-all" />
+                    <input type='input' className="hidden" defaultValue={selectOpt?.id} name={name} />
+                    <Img ref={arrowRef} src='./icons/downArrow.svg' alt='upload icon' width={20} height={20} className="mr-2 rotate-180 transition-all" />
                 </div>
 
                 <div ref={refMenu} className="absolute invisible translate-y-0 shadow-2xl border transition-all  duration-200 bg-white ">
-                    <button
-                        type="button"
-                        className="capitalize text-left my-1 py-1 text-[0.7rem] w-full px-3 leading-6 font-medium"
-                        onClick={() => onSelectOpt("menu 1")}
-                    >
-                        <p>menu 1</p>
-                    </button>
-                    <button
-                        type="button"
-                        className="text-left my-1 py-1 text-[0.7rem] w-full px-3 leading-6 font-medium"
-                        onClick={() => onSelectOpt("menu 2")}
-                    >
-                        <p>menu 2</p>
-                    </button>
+                    {opts.length > 0 ? opts.map((opt, i) => (
+                        <div
+                            key={i}
+                            className="capitalize text-left my-1 py-1 text-[0.7rem] w-full px-3 leading-6 font-medium"
+                            onClick={() => onSelectOpt(opt)}
+                        >
+                            <p>{opt.name}</p>
+                        </div>
+
+                    )) : ''}
                 </div>
             </div>
         </div>

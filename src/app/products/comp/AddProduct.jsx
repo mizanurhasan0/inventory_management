@@ -3,8 +3,11 @@ import Dropdown from '@/components/dropdown/Dropdown';
 import Input_Label from '@/components/input/Input_Label'
 import Upload from '@/components/upload/Upload';
 import React, { useState } from 'react'
+import { useProductCtx } from '../ctx/ProductCtx';
 
 export default function AddProduct() {
+    const { supplier } = useProductCtx();
+
     const [upData, setupData] = useState();
     const onSubmit = (e) => {
         e.preventDefault();
@@ -21,7 +24,7 @@ export default function AddProduct() {
                         <Input_Label lbl="Product name *" name="name" defaultValue={upData?.brand} />
                         <Input_Label lbl="Product Code *" name="code" defaultValue={upData?.name} />
                         <Input_Label lbl="Brand *" name="brand" defaultValue={upData?.contact.email} />
-                        <Dropdown lbl="Select Supplier *" />
+                        <Dropdown lbl="Select Supplier *" opts={supplier} name="supplier" />
                         <Input_Label lbl="Price *" name="price" defaultValue={upData?.contact.phone} />
                         <Input_Label lbl="stock *" name="stock" defaultValue={upData?.address} />
                     </div>

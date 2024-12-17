@@ -9,8 +9,11 @@ export default function Category() {
     const [upData, setupData] = useState();
     const onSubmit = (e) => {
         e.preventDefault();
-
+        const fd = new FormData(e.target);
+        const jsData = Object.fromEntries(fd);
+        console.log(jsData);
     }
+
     return (
         <div className="flex space-x-4 w-full">
             <div>
@@ -20,7 +23,7 @@ export default function Category() {
                         <Upload name="image" />
                     </div>
                     <Input_Label lbl="Category name *" name="name" defaultValue={upData?.brand} />
-                    <Input_Label lbl="Description" name="code" defaultValue={upData?.name} />
+                    <Input_Label field="textArea" rows={5} lbl="Description" name="description" defaultValue={upData?.name} />
 
                     <div className="flex items-center space-x-2 justify-end">
                         <Btn>Cancel</Btn>
