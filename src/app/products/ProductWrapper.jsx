@@ -5,13 +5,9 @@ import { useProductCtx } from './ctx/ProductCtx';
 import Title from '@/components/title/Title';
 import Category from './comp/Category';
 import { useRouter, useSearchParams } from 'next/navigation';
+import BarcodeGenerate from './comp/barcode/BarcodeGenerate';
 
-let tabs = [
-    { id: 0, label: "lists", component: <Products /> },
-    { id: 1, label: "create", component: <AddProduct /> },
-    { id: 2, label: "category", component: <Category /> },
-];
-let tabs1 = { "lists": <Products />, "create": <AddProduct />, "category": <Category /> }
+let tabs1 = { "lists": <Products />, "create": <AddProduct />, "category": <Category />, "barcode": <BarcodeGenerate /> }
 export default function ProductWrapper() {
     const { onTab, curTab } = useProductCtx();
     const { push } = useRouter();
