@@ -1,21 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react';
-import JsBarcode from 'jsbarcode';
+'use client';
+import React, { useState } from 'react';
 import Search from '@/components/search/Search';
 import fkProducts from "@/data/products";
-import Input from '@/components/input/Input';
 import Input_Label from '@/components/input/Input_Label';
 import Img from '@/components/img/Img';
 import Btn from '@/components/btn/Btn';
 import Code from './Code';
-import printJS from 'print-js';
+// import printJS from 'print-js';
 
 export default function BarcodeGenerate() {
     const products = fkProducts;
-    const barcodeRef = useRef();
 
     const [query, setQuery] = useState(null);
     const [select, setSelect] = useState(null);
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState(0);
 
     const onSearch = (text) => {
         if (text === '') return setQuery(null);
@@ -29,7 +27,8 @@ export default function BarcodeGenerate() {
         const { count } = Object.fromEntries(fd);
         setCount(count);
     }
-    const onPrint = () => {
+    const onPrint = async () => {
+        const printJS = (await import('print-js')).default;
         printJS({
             printable: "printselect",
             type: "html",
@@ -58,33 +57,49 @@ export default function BarcodeGenerate() {
                     </div>
                     <form onSubmit={onSubmit}>
                         <Input_Label lbl="Total barcode" type="number" placeholder="Total number" name="count" />
-                        <div className="flex space-x-2 py-2 justify-end" >
-                            <Btn>Clean</Btn>
-                            <Btn type="submit" className="bg-green_base text-white">Generate</Btn>
+                        <div className="flex  py-2 justify-between" >
+                            {(count > 0 && select) ? <Btn onClick={onPrint}>Print</Btn> : <p></p>}
+                            <div className="flex items-center space-x-2">
+                                <Btn>Clean</Btn>
+                                <Btn type="submit" className="bg-green_base text-white">Generate</Btn>
+                            </div>
                         </div>
                     </form>
                 </div>
                 <div>
                     <div className="text-xl text-gray_base capitalize border text-center space-y-2 py-4 rounded-md shadow">
                         <p className="text-green_base font-medium py-2">Product Details</p>
-                        <div className="flex justify-center">
-                            <Img src={select?.image || "/default.svg"} className="w-20 h-20" />
-                        </div>
-                        <p>Code:{select?.code || '---'}</p>
-                        <p>Name:{select?.name || '---'}</p>
-                        <p>Price:{select?.price || '---'}</p>
+                        {select ? (
+                            <div>
+                                <div className="flex justify-center">
+                                    <Img src={select?.image || "/default.svg"} className="w-20 h-20" />
+                                </div>
+                                <p>Code:{select?.code || '---'}</p>
+                                <p>Name:{select?.name || '---'}</p>
+                                <p>Price:{select?.price || '---'}</p>
+                            </div>
+                        ) : (
+                            <div>
+                                <p className="text-sm">No record found!</p>
+                            </div>
+                        )}
+
                     </div>
 
                 </div>
             </div>
-            <div id="printselect" className="flex flex-wrap gap-4 py-5" ref={barcodeRef}>
-                {select !== null ? Array.from({ length: Number(count) }).map((_, idx) => (
-                    <div key={idx}>
-                        <Code code={select?.code} />
-                    </div>
-                )) : ''}
-            </div>
-            <button type='button' onClick={onPrint}>Print</button>
+            {(count > 0 && select) ? (
+                <div id="printselect" className="flex flex-wrap gap-4 py-5">
+                    {select !== null ? Array.from({ length: Number(count) }).map((_, idx) => (
+                        <div key={idx}>
+                            <Code code={select?.code} />
+                        </div>
+
+                    )) : ''}
+                </div>
+            ) : <p className="text-center py-10  text-green_base">Not found any image!</p>}
+
+
         </div>
     )
 }

@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Products from './comp/Products';
 import AddProduct from './comp/AddProduct';
-import { useProductCtx } from './ctx/ProductCtx';
 import Title from '@/components/title/Title';
 import Category from './comp/Category';
-import { useRouter, useSearchParams } from 'next/navigation';
 import BarcodeGenerate from './comp/barcode/BarcodeGenerate';
 
 let tabs1 = { "lists": <Products />, "create": <AddProduct />, "category": <Category />, "barcode": <BarcodeGenerate /> }
 export default function ProductWrapper() {
-    const { onTab, curTab } = useProductCtx();
     const { push } = useRouter();
     const searchParam = useSearchParams();
     const opt = searchParam.get('opt');

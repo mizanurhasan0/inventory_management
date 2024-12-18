@@ -1,19 +1,13 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import fkProducts from '@/data/products';
 import fkSuppier from '@/data/supplier';
-import { useRouter } from "next/navigation";
-
 
 const Ctx = createContext();
 
 export default function ProudctCtx({ children }) {
     const [products, setProducts] = useState([]);
     const [supplier, setSupplier] = useState([]);
-    const [curTab, setCurTab] = useState(2);
 
-    const onTab = (idx) => {
-        setCurTab(idx);
-    };
     useEffect(() => {
         if (fkProducts.length > 0) {
             setSupplier(() => fkSuppier);
@@ -21,7 +15,7 @@ export default function ProudctCtx({ children }) {
         }
     }, []);
     return (
-        <Ctx.Provider value={{ products, setProducts, curTab, onTab, supplier }} >
+        <Ctx.Provider value={{ products, setProducts, supplier }} >
             {children}
         </Ctx.Provider>
     )
