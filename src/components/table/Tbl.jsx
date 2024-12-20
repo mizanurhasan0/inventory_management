@@ -36,7 +36,7 @@ export default function Tbl({ header = "usrs", data, action = false }) {
                         {action ? <td className="border px-2">
                             <div className="flex space-x-2 justify-center relative">
                                 <h4 className="whitespace-nowrap border py-1 px-2 rounded-md cursor-pointer select-none" onClick={() => onMenu(i)}>Action &#11167;</h4>
-                                <div className={`${menuOpen === i ? 'block' : 'hidden'} absolute  inline-block top-8 w-20 bg-gray_light border`}>
+                                <div className={`${menuOpen === i ? 'block' : 'hidden'} absolute  inline-block top-8 w-20 bg-gray_light border z-50`}>
                                     {actions.map((opt, i) => (
                                         <div key={i} className="cursor-pointer px-2 py-1 hover:bg-white">{opt}</div>
                                     ))}

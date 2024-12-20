@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Mery K",
+        "phone": "01818674298",
+        "email": "eng.mizanur.hasan@gmail.com",
+        "address": "Mirpur-12, Dhaka-1216",
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    },
+    {
+        "id": 2,
+        "name": "Mery K",
+        "phone": "01818674298",
+        "email": "easy@gmail.com",
+        "address": "Mirpur-12, Dhaka-1216",
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    },
+    {
+        "id": 3,
+        "name": "Mery K",
+        "phone": "01818674298",
+        "email": "rich@gmail.com",
+        "address": "Mirpur-12, Dhaka-1216",
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    },
+    {
+        "id": 4,
+        "name": "Mery K",
+        "phone": "01818674298",
+        "email": "evaly@gmail.com",
+        "address": "Mirpur-12, Dhaka-1216",
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    },
+    {
+        "id": 5,
+        "name": "Daraz",
+        "phone": "01818674298",
+        "email": "eng.mizanur.hasan@gmail.com",
+        "address": "Mirpur-12, Dhaka-1216",
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    },
+    {
+        "id": 6,
+        "name": "Mery K",
+        "phone": "01818674298",
+        "email": "eng.mizanur.hasan@gmail.com",
+        "address": "Mirpur-12, Dhaka-1216",
+        "createdAt": "2024-12-09T18:38:15.026Z"
+    }
+]
