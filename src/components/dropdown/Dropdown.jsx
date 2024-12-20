@@ -42,7 +42,7 @@ export default function Dropdown({ lbl = "select ", placeholder = "Select ...", 
                             className="capitalize text-left my-1 py-1 text-[0.7rem] w-full px-3 leading-6 font-medium"
                             onClick={() => onSelectOpt(opt)}
                         >
-                            <p>{opt.name}</p>
+                            <p>{opt?.name}</p>
                         </div>
 
                     )) : ''}

@@ -35,11 +35,10 @@ export default function AddCustomer({ onClose = () => { } }) {
     }, [id]);
     return (
         <form onSubmit={onSubmit} className="space-y-2">
-            <Input_Label lbl="Supplier name *" name="brand" defaultValue={updateData?.brand} />
-            <Input_Label lbl="Owner name *" name="name" defaultValue={updateData?.name} />
-            <Input_Label lbl="Supplier email *" name="email" defaultValue={updateData?.contact.email} />
-            <Input_Label lbl="Supplier number *" name="mobile" defaultValue={updateData?.contact.phone} />
-            <Input_Label lbl="Supplier address *" name="address" defaultValue={updateData?.address} />
+            <Input_Label lbl="Customer name *" name="name" defaultValue={updateData?.brand} />
+            <Input_Label lbl="Customer email *" name="email" defaultValue={updateData?.contact.email} />
+            <Input_Label lbl="Phone number *" name="phone" defaultValue={updateData?.contact.phone} />
+            <Input_Label field="textarea" lbl="Address *" name="address" defaultValue={updateData?.address} />
             <div className="flex items-center space-x-2 justify-end">
                 <Btn onClick={onClose}>Cancel</Btn>
                 <Btn type="submit" className="bg-yellow-500 text-green_base">{updateData ? 'Update' : 'Add'}</Btn>

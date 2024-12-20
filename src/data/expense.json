@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "title": "Team Lunch",
+        "description": "Lunch with the marketing team.",
+        "amount": 150,
+        "category": "Food",
+        "incurredBy": "John Doe",
+        "date": "2024-12-15",
+        "createdAt": "2024-12-15",
+        "updatedAt": "2024-12-15"
+    },
+    {
+        "id": 1,
+        "title": "Office supplier",
+        "description": "Purchase office supplier.",
+        "amount": 150,
+        "category": "Office supplier",
+        "incurredBy": "John Doe",
+        "date": "2024-12-15",
+        "createdAt": "2024-12-15",
+        "updatedAt": "2024-12-15"
+    }
+]

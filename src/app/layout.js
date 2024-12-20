@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
       >
         <main className="flex min-h-screen">
           <Sidebar />
-          <div className="relative h-full max-h-screen md:p-4  w-full overflow-y-auto">
+          <div className="relative h-full min-h-screen md:p-4  w-full overflow-y-auto">
             {children}
           </div>
         </main>
