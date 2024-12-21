@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import Tbl from '@/components/table/Tbl';
 import Search from '@/components/search/Search';
 import products from '@/data/products';
+import Modal from '@/components/modal/Modal';
+import UpdateQty from './UpdateQty';
 
 export default function AddItem({ data = [], setData = () => { } }) {
     const [query, setQuery] = useState(null);
+    const [upProd, setUpProd] = useState(null);
 
     const onSearch = (text) => {
         if (text === '') return setQuery(null);
@@ -22,7 +25,9 @@ export default function AddItem({ data = [], setData = () => { } }) {
             ]
         }));
     }
-
+    const onEdit = (id) => {
+        setUpProd(() => data.find((d) => d.id === id));
+    }
     return (
         <div>
             <h2 className="text-2xl font-semibold">Sales order items</h2>
@@ -43,10 +48,17 @@ export default function AddItem({ data = [], setData = () => { } }) {
             </div>
             {data.length > 0 ? (
                 <div>
-                    <Tbl header='orderItem' data={data} />
+                    <Tbl header='orderItem' data={data} action onEdit={onEdit} />
                 </div>
             ) : ''}
+            <div>
+                {upProd ? (
+                    <Modal title="Order Update" onClose={() => setUpProd(null)}>
+                        <UpdateQty product={upProd} setData={setData} />
+                    </Modal>
+                ) : ''}
 
+            </div>
         </div>
     )
 }

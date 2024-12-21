@@ -6,13 +6,12 @@ import Btn from '@/components/btn/Btn';
 import { useOrderCtx } from '../context/OrderCtx';
 import AddItem from './comp/AddItem';
 
+// const Fields=[{"Sales order id":"orderId"},{"Order status":"status"},{"Order date":"createdAt"},{"Total amount":"totalAmount"},{"Order count":""},{"Customer":""}]
 export default function OrderDetails() {
     const { orderStatus } = useOrderCtx();
     const query = useSearchParams();
     const id = query.get('id');
     const [detail, setDetail] = useState(null);
-
-
 
     useEffect(() => {
         setDetail(() => {
@@ -29,7 +28,6 @@ export default function OrderDetails() {
         const t = new Date(d).toLocaleTimeString();
         return `${dt} - ${t}`
     }
-    // console.log(orderStatus);
     const onUpdateState = () => {
         // update status
         setDetail((prev) => {
@@ -44,7 +42,7 @@ export default function OrderDetails() {
         <div className="container mx-auto py-5">
             <div className="pb-10">
                 <h1 className="capitalize text-2xl font-semibold">
-                    {detail?.products.map((item) => item?.product).join(',') || '-'}
+                    {detail?.products?.map((item) => item?.product).join(',') || '-'}
                 </h1>
             </div>
             <table className="w-full">
