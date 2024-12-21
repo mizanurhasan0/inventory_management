@@ -4,11 +4,11 @@ import React, { useState } from 'react'
 import { useRef } from 'react'
 import Img from '../img/Img';
 
-export default function Dropdown({ lbl = "select ", placeholder = "Select ...", name = "", opts = [] }) {
+export default function Dropdown({ lbl = "select ", placeholder = "Select ...", name = "", opts = [], defaultValue = {} }) {
     const refMenu = useRef();
     const arrowRef = useRef();
-
-    const [selectOpt, setSelectOpt] = useState(null);
+    const selectValRef = useRef();
+    const hideRef = useRef();
 
     const onOpen = () => {
         const check = refMenu.current.className.includes('invisible');
@@ -17,7 +17,9 @@ export default function Dropdown({ lbl = "select ", placeholder = "Select ...", 
         arrowRef.current.classList.toggle("rotate-180", !check);
     }
     const onSelectOpt = (opt) => {
-        setSelectOpt(opt);
+        selectValRef.current.value = opt.name;
+        hideRef.current.value = opt.id;
+        // setSelectOpt(opt);
         onOpen();
     }
     return (
@@ -25,13 +27,15 @@ export default function Dropdown({ lbl = "select ", placeholder = "Select ...", 
             <label className="text-gray_base text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 capitalize">{lbl}</label>
             <div className="rounded-md text-cgray">
                 <div className="h-11 flex border focus-within:border-cgreen rounded-lg overflow-hidden">
-                    <input className="flex-1 px-2 h-full w-full outline-0 leading-6 capitalize cursor-pointer" type="text" name="search" placeholder={placeholder}
+                    <input ref={selectValRef} className="flex-1 px-2 h-full w-full outline-0 leading-6 capitalize cursor-pointer" type="text" name="option" placeholder={placeholder}
                         onClick={onOpen}
                         autoComplete='off'
-                        value={selectOpt?.name || ''}
+                        defaultValue={defaultValue?.option || ''}
+
                         onChange={() => { }}
                     />
-                    <input type='input' className="hidden" defaultValue={selectOpt?.id} name={name} />
+                    <input ref={hideRef} type='input' className="hidden" name={name} defaultValue={defaultValue?.id || ''} />
+
                     <Img ref={arrowRef} src='./icons/downArrow.svg' alt='upload icon' width={20} height={20} className="mr-2 rotate-180 transition-all" />
                 </div>
 
