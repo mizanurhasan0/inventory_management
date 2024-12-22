@@ -23,7 +23,7 @@ export default function OrderDetails() {
             }
             return dt || {};
         });
-    }, []);
+    }, [id]);
 
     const getDateFormate = (d) => {
         const dt = new Date(d).toLocaleDateString();

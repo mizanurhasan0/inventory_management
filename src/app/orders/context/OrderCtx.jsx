@@ -16,7 +16,7 @@ export default function OrderCtx({ children }) {
     useEffect(() => {
         setListOrder(fkData);
         if (id) setOpenFrm(true);
-    }, []);
+    }, [id]);
 
     return (
         <Suspense fallback={<p>Loading order details...</p>}>
