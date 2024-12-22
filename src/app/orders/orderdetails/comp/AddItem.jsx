@@ -15,15 +15,28 @@ export default function AddItem({ data = [], setData = () => { } }) {
         return setQuery(() => prods);
     }
     const onAdd = (obj) => {
-        setQuery(() => null);
-        setData((prev) => ({
-            ...prev,
-            totalAmount: prev.totalAmount + obj.price,
-            products: [
-                ...prev.products,
-                { 'id': obj?.id, "product": obj?.name, 'price per item': obj?.price, 'total price': obj.price, ...obj, qty: 1 }
-            ]
-        }));
+        setQuery(null);
+        setData((prev) => {
+            const exist = prev.products.some((item) => item.id === obj.id);
+            if (exist) return prev;
+            const newProuct = {
+                id: obj.id,
+                product: obj.name,
+                "price per item": obj.price,
+                "total price": obj.price,
+                ...obj,
+                qty: 1,
+            }
+            return {
+                ...prev,
+                totalAmount: prev.totalAmount + obj.price,
+                orderCount: prev.orderCount + 1,
+                products: [
+                    ...prev.products, newProuct
+                ]
+
+            }
+        });
     }
     const onEdit = (id) => {
         setUpProd(() => data.find((d) => d.id === id));
