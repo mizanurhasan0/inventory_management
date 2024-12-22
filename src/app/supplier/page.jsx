@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { Suspense } from 'react'
 import SupplyCtx from './context/SupplyCtx'
 import SupplierWrapper from './comp/SupplierWrapper';
 
@@ -7,8 +7,10 @@ import SupplierWrapper from './comp/SupplierWrapper';
 export default function Supplier() {
 
     return (
-        <SupplyCtx>
-            <SupplierWrapper />
-        </SupplyCtx>
+        <Suspense fallback={<p>Loading....</p>}>
+            <SupplyCtx>
+                <SupplierWrapper />
+            </SupplyCtx>
+        </Suspense>
     )
 }
