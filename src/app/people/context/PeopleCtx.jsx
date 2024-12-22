@@ -1,5 +1,5 @@
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, Suspense, useContext, useEffect, useState } from 'react';
 import fkData from "@/data/customers";
 import { useSearchParams } from 'next/navigation';
 
@@ -18,9 +18,11 @@ export default function PeopleCtx({ children }) {
     }, []);
 
     return (
-        <Ctx.Provider value={{ listPeople, setListPeople, openFrm, setOpenFrm }}>
-            {children}
-        </Ctx.Provider>
+        <Suspense fallback={<p>Loading  details...</p>}>
+            <Ctx.Provider value={{ listPeople, setListPeople, openFrm, setOpenFrm }}>
+                {children}
+            </Ctx.Provider>
+        </Suspense>
     )
 }
 

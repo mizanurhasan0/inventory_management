@@ -1,5 +1,5 @@
 
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, Suspense, useContext, useEffect, useState } from 'react'
 import fkData from "@/data/order";
 import { useSearchParams } from 'next/navigation';
 
@@ -19,9 +19,11 @@ export default function OrderCtx({ children }) {
     }, []);
 
     return (
-        <Ctx.Provider value={{ listOrder, setListOrder, openFrm, setOpenFrm, orderStatus }}>
-            {children}
-        </Ctx.Provider>
+        <Suspense fallback={<p>Loading order details...</p>}>
+            <Ctx.Provider value={{ listOrder, setListOrder, openFrm, setOpenFrm, orderStatus }}>
+                {children}
+            </Ctx.Provider>
+        </Suspense>
     )
 }
 

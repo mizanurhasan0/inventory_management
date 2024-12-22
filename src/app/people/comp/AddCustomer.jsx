@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import Input_Label from '@/components/input/Input_Label';
 import Btn from '@/components/btn/Btn';
 import { usePeopleCtx } from '../context/PeopleCtx';
@@ -34,15 +34,17 @@ export default function AddCustomer({ onClose = () => { } }) {
         }
     }, [id]);
     return (
-        <form onSubmit={onSubmit} className="space-y-2">
-            <Input_Label lbl="Customer name *" name="name" defaultValue={updateData?.brand} />
-            <Input_Label lbl="Customer email *" name="email" defaultValue={updateData?.contact.email} />
-            <Input_Label lbl="Phone number *" name="phone" defaultValue={updateData?.contact.phone} />
-            <Input_Label field="textarea" lbl="Address *" name="address" defaultValue={updateData?.address} />
-            <div className="flex items-center space-x-2 justify-end">
-                <Btn onClick={onClose}>Cancel</Btn>
-                <Btn type="submit" className="bg-green_base text-gray_light">{updateData ? 'Update' : 'Add'}</Btn>
-            </div>
-        </form>
+        <Suspense fallback={<p>Loading  details...</p>}>
+            <form onSubmit={onSubmit} className="space-y-2">
+                <Input_Label lbl="Customer name *" name="name" defaultValue={updateData?.brand} />
+                <Input_Label lbl="Customer email *" name="email" defaultValue={updateData?.contact.email} />
+                <Input_Label lbl="Phone number *" name="phone" defaultValue={updateData?.contact.phone} />
+                <Input_Label field="textarea" lbl="Address *" name="address" defaultValue={updateData?.address} />
+                <div className="flex items-center space-x-2 justify-end">
+                    <Btn onClick={onClose}>Cancel</Btn>
+                    <Btn type="submit" className="bg-green_base text-gray_light">{updateData ? 'Update' : 'Add'}</Btn>
+                </div>
+            </form>
+        </Suspense>
     )
 }

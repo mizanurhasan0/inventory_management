@@ -1,5 +1,5 @@
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, Suspense, useContext, useEffect, useState } from 'react';
 import fkData from "@/data/expense";
 import { useSearchParams } from 'next/navigation';
 
@@ -18,9 +18,11 @@ export default function ExpenseCtx({ children }) {
     }, []);
 
     return (
-        <Ctx.Provider value={{ listExpense, setListExpense, openFrm, setOpenFrm }}>
-            {children}
-        </Ctx.Provider>
+        <Suspense fallback={<p>Loading details...</p>}>
+            <Ctx.Provider value={{ listExpense, setListExpense, openFrm, setOpenFrm }}>
+                {children}
+            </Ctx.Provider>
+        </Suspense>
     )
 }
 

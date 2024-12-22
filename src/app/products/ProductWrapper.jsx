@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Products from './comp/Products';
 import AddProduct from './comp/AddProduct';
@@ -17,30 +17,32 @@ export default function ProductWrapper() {
         // onTab(obj.id);
     }
     return (
-        <div className="container mx-auto">
-            <Title name="Products" />
-            <div className="">
-                {/* Tab Navigation */}
-                <div className="flex border-b border-gray-300">
-                    {Object.keys(tabs1).map((lbl, idx) => (
-                        <div
-                            key={idx}
-                            onClick={() => onTabClick(lbl)}
-                            className={`cursor-pointer capitalize px-4 py-2 -mb-px border-b-2 transition-all duration-700 ${lbl === opt
-                                ? "text-green_base border-green_base"
-                                : "text-gray_base border-transparent"
-                                }`}
-                        >
-                            {lbl}
-                        </div>
-                    ))}
-                </div>
+        <Suspense fallback={<p>Loading details...</p>}>
+            <div className="container mx-auto">
+                <Title name="Products" />
+                <div className="">
+                    {/* Tab Navigation */}
+                    <div className="flex border-b border-gray-300">
+                        {Object.keys(tabs1).map((lbl, idx) => (
+                            <div
+                                key={idx}
+                                onClick={() => onTabClick(lbl)}
+                                className={`cursor-pointer capitalize px-4 py-2 -mb-px border-b-2 transition-all duration-700 ${lbl === opt
+                                    ? "text-green_base border-green_base"
+                                    : "text-gray_base border-transparent"
+                                    }`}
+                            >
+                                {lbl}
+                            </div>
+                        ))}
+                    </div>
 
-                {/* Tab Content */}
-                <div className="mt-4">
-                    {tabs1[opt]}
+                    {/* Tab Content */}
+                    <div className="mt-4">
+                        {tabs1[opt]}
+                    </div>
                 </div>
             </div>
-        </div>
+        </Suspense>
     )
 }
