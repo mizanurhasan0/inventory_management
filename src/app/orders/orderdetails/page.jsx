@@ -69,7 +69,7 @@ export default function OrderDetails() {
                     </tr>
                     <tr className="border border-x-0 border-t-0">
                         <td className="py-5 px-2">Order count</td>
-                        <td className=" inline-block px-2 py-1 rounded-md mt-4">50</td>
+                        <td className=" inline-block px-2 py-1 rounded-md mt-4">{detail?.orderCount || 0}</td>
                     </tr>
                     <tr className="border border-x-0 border-t-0">
                         <td className="py-5 px-2">Customer</td>

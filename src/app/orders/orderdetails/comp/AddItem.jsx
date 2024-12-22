@@ -28,6 +28,7 @@ export default function AddItem({ data = [], setData = () => { } }) {
     const onEdit = (id) => {
         setUpProd(() => data.find((d) => d.id === id));
     }
+
     return (
         <div>
             <h2 className="text-2xl font-semibold">Sales order items</h2>
@@ -54,7 +55,7 @@ export default function AddItem({ data = [], setData = () => { } }) {
             <div>
                 {upProd ? (
                     <Modal title="Order Update" onClose={() => setUpProd(null)}>
-                        <UpdateQty product={upProd} setData={setData} />
+                        <UpdateQty product={upProd} setData={setData} onClose={() => setUpProd(null)} />
                     </Modal>
                 ) : ''}
 

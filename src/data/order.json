@@ -27,6 +27,7 @@
             }
         ],
         "totalAmount": 400,
+        "orderCount": 3,
         "status": "pending",
         "createdAt": "2024-12-09T18:38:15.026Z"
     },
@@ -58,6 +59,7 @@
             }
         ],
         "totalAmount": 400,
+        "orderCount": 3,
         "status": "deliver",
         "createdAt": "2024-12-09T18:38:15.026Z"
     },
@@ -89,6 +91,7 @@
             }
         ],
         "totalAmount": 400,
+        "orderCount": 3,
         "status": "pending",
         "createdAt": "2024-12-09T18:38:15.026Z"
     },
@@ -101,6 +104,7 @@
         },
         "products": [],
         "totalAmount": 0,
+        "orderCount": 0,
         "status": "pending",
         "createdAt": "2024-12-09T18:38:15.026Z"
     }
