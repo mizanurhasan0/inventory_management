@@ -35,9 +35,13 @@ export default function BarcodeGenerate() {
             targetStyles: ["*"],
         });
     }
+    const onSelectItem = (p) => {
+        setSelect(p);
+        setQuery(null);
+    }
     return (
         <div>
-            <h2>Barcode genereated</h2>
+            <h2 className="text-xl text-green_base text-center py-5 underline underline-offset-4">Barcode genereated</h2>
             <div className="grid grid-cols-2 gap-4">
                 <div>
                     <div className="py-5 relative">
@@ -45,7 +49,7 @@ export default function BarcodeGenerate() {
                         <div className="z-10 absolute bg-gray_light w-full shadow-2xl">
                             {query !== null && query.map((p, i) => (
                                 <div key={i} className="flex items-center justify-between space-x-4 border border-green_base p-2 border-x-0 border-t-0 capitalize"
-                                    onClick={() => setSelect(p)}>
+                                    onClick={() => onSelectItem(p)}>
                                     <h3>{p.id} -</h3>
                                     <h3>{p.name} -</h3>
                                     <p>&#2547;-{p.price} -</p>
@@ -70,7 +74,7 @@ export default function BarcodeGenerate() {
                     <div className="text-xl text-gray_base capitalize border text-center space-y-2 py-4 rounded-md shadow">
                         <p className="text-green_base font-medium py-2">Product Details</p>
                         {select ? (
-                            <div>
+                            <div className="text-base space-y-1">
                                 <div className="flex justify-center">
                                     <Img src={select?.image || "/default.svg"} className="w-20 h-20" />
                                 </div>

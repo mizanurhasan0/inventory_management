@@ -41,7 +41,7 @@ export default function AddCustomer({ onClose = () => { } }) {
             <Input_Label field="textarea" lbl="Address *" name="address" defaultValue={updateData?.address} />
             <div className="flex items-center space-x-2 justify-end">
                 <Btn onClick={onClose}>Cancel</Btn>
-                <Btn type="submit" className="bg-yellow-500 text-green_base">{updateData ? 'Update' : 'Add'}</Btn>
+                <Btn type="submit" className="bg-green_base text-gray_light">{updateData ? 'Update' : 'Add'}</Btn>
             </div>
         </form>
     )

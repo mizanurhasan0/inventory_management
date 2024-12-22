@@ -27,7 +27,7 @@ export default function Category() {
 
                     <div className="flex items-center space-x-2 justify-end">
                         <Btn>Cancel</Btn>
-                        <Btn type="submit" className="bg-yellow-500 text-green_base">{upData ? 'Update' : 'Add'}</Btn>
+                        <Btn type="submit" className="bg-green_base text-gray_light">{upData ? 'Update' : 'Add'}</Btn>
                     </div>
                 </form>
             </div>
