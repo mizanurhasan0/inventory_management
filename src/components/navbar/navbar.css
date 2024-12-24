@@ -1,23 +1,15 @@
 .main-tool-bar {
-    height: 80px;
-    background: #f7f7f7;
-    color:#0e100f;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    transition: ease 0.4s;
-   
-  }
-  .main-tool-bar--scrolled {
-    height: 40px;
-  }
+	background: #f7f7f7;
+	color: #0e100f;
+	transition: ease 0.4s;
 
-  /* Mobile */
+}
+
+.main-tool-bar--scrolled {
+	height: 40px;
+}
+
+/* Mobile */
 
 
 /* nav{
@@ -36,7 +28,7 @@
 }
 
 
-.navCustomCss ul li a{
+.navCustomCss ul li a {
 	color: #fafafa;
 	font-size: 2em;
 	text-decoration: none;
@@ -46,7 +38,7 @@
 	pointer-events: none;
 }
 
-.navCustomCss ul li a:after{
+.navCustomCss ul li a:after {
 	content: '';
 	width: 100%;
 	position: absolute;
@@ -61,6 +53,6 @@
 }
 
 
-.navCustomCss ul li a:hover:after{
+.navCustomCss ul li a:hover:after {
 	transform: scaleX(1);
 }

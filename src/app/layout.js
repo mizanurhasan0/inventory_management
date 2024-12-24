@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 
 import "./globals.css";
-import Navbar from "../components/navbar/Navbar";
+import Navbar from "@/components/navbar/Navbar";
 import NavbarMbl from "@/components/navbar/NavbarMbl";
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,8 +18,11 @@ export default function RootLayout({ children }) {
         className={`antialiased ${inter.className}`}
       >
         <main className="">
-          {/* <Navbar /> */}
-          <NavbarMbl />
+          <div className="">
+            <h1>this is banner</h1>
+          </div>
+          <Navbar className="hidden md:flex" />
+          <NavbarMbl className="block md:hidden" />
           <div>
             {children}
           </div>

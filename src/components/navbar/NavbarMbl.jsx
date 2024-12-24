@@ -6,7 +6,7 @@ import CloseIcon from "./icons/close.svg";
 import Menu from "./data";
 import Link from 'next/link';
 
-export default function NavbarMbl() {
+export default function NavbarMbl({ className = '' }) {
     const navRef = useRef(null);
     const closeRef = useRef(null);
     const tl = useRef(null);
@@ -33,12 +33,12 @@ export default function NavbarMbl() {
     };
 
     return (
-        <div>
-            <div className="absolute top-0 left-0 right-0 flex items-center justify-between container mx-auto py-2" >
-                <div>
+        <div className={`${className}`}>
+            <div className=" main-tool-bar fixed top-0 left-0 right-0 h-20 flex" >
+                <div className="flex items-center justify-between container mx-auto">
                     <h1 className="font-semibold uppercase">Shop Icon</h1>
+                    <MenuIcon className="w-8 h-8 cursor-pointer" onClick={handleOpen} />
                 </div>
-                <MenuIcon className="w-8 h-8 cursor-pointer" onClick={handleOpen} />
             </div>
 
             <nav ref={navRef} className="navCustomCss absolute w-full bg-black right-[100vw] h-4">

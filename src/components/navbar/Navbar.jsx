@@ -7,15 +7,9 @@ import { SvgSearch, SvgShopping, SvgUser } from '@/assets';
 import Img from '@/components/img/Img';
 import Link from 'next/link';
 import "./navbar.css";
+import Menus from "./data";
 
-const Menus = [
-    { id: 1, name: "Home", icon: "/icons/dashboard.svg", src: "/" },
-    { id: 2, name: "Shop", icon: "/icons/supplier.svg", src: "/shop" },
-    { id: 3, name: "Blog", icon: "/icons/order.svg", src: "/blog" },
-    { id: 4, name: "About", icon: "/icons/purchase.svg", src: "/about" },
-]
-
-export default function Navbar() {
+export default function Navbar({ className = "" }) {
     gsap.registerPlugin(ScrollTrigger);
     const { push } = useRouter();
     const pathName = usePathname();
@@ -35,7 +29,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <div className='main-tool-bar'>
+        <div className={`${className} main-tool-bar w-full sticky left-0 top-0 h-20`}>
             <div className="flex items-center justify-between w-full container mx-auto">
                 <div className="cursor-pointer" onClick={() => push('/')}>
                     <Img src={"/default.svg"} />
