@@ -1,19 +1,9 @@
-// import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 
 import "./globals.css";
-import Sidebar from "./Sidebar";
+import Navbar from "../components/navbar/Navbar";
+import NavbarMbl from "@/components/navbar/NavbarMbl";
 
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -27,9 +17,10 @@ export default function RootLayout({ children }) {
       <body
         className={`antialiased ${inter.className}`}
       >
-        <main className="flex min-h-screen">
-          <Sidebar />
-          <div className="relative h-full min-h-screen md:p-4  w-full overflow-y-auto">
+        <main className="">
+          {/* <Navbar /> */}
+          <NavbarMbl />
+          <div>
             {children}
           </div>
         </main>

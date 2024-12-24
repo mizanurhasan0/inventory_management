@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Home",
+        "icon": "/icons/dashboard.svg",
+        "src": "/"
+    },
+    {
+        "id": 2,
+        "name": "Shop",
+        "icon": "/icons/supplier.svg",
+        "src": "/shop"
+    },
+    {
+        "id": 3,
+        "name": "Blog",
+        "icon": "/icons/order.svg",
+        "src": "/blog"
+    },
+    {
+        "id": 4,
+        "name": "About",
+        "icon": "/icons/purchase.svg",
+        "src": "/about"
+    }
+]
