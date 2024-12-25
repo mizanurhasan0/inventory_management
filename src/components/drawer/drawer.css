@@ -1,0 +1,20 @@
+/* styles.css */
+.drawer {
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.drawer.open {
+  transform: translateX(0);
+}
+
+/* .drawer-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+} */
+/* 
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+} */

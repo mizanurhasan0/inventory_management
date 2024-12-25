@@ -9,7 +9,7 @@ import Link from 'next/link';
 import "./navbar.css";
 import Menus from "./data";
 
-export default function Navbar({ className = "" }) {
+export default function Navbar({ className = "", openDrawer = () => { } }) {
     gsap.registerPlugin(ScrollTrigger);
     const { push } = useRouter();
     const pathName = usePathname();
@@ -44,9 +44,9 @@ export default function Navbar({ className = "" }) {
                 <div className="flex items-center space-x-2">
                     <SvgSearch className="stroke-green_base w-7 h-7" />
                     <SvgUser className="stroke-green_base w-7 h-7 cursor-pointer" onClick={() => push('/profile')} />
-                    <div className="relative cursor-pointer" onClick={() => { }}>
-                        <SvgShopping className="stroke-green_base w-7 h-7" />
-                        <div className="absolute rounded-full w-3 h-3 animate-pulse bg-base3 top-0 right-0" />
+                    <div className="relative cursor-pointer" onClick={openDrawer}>
+                        <SvgShopping className="w-7 h-7" />
+                        <div className="absolute rounded-full w-3 h-3 animate-pulse bg-green-600 top-0 right-0" />
                     </div>
                 </div>
             </div>

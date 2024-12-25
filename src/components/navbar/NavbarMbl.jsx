@@ -34,7 +34,7 @@ export default function NavbarMbl({ className = '' }) {
 
     return (
         <div className={`${className}`}>
-            <div className=" main-tool-bar fixed top-0 left-0 right-0 h-20 flex" >
+            <div className="main-tool-bar fixed top-0 left-0 right-0 h-20 flex" >
                 <div className="flex items-center justify-between container mx-auto">
                     <h1 className="font-semibold uppercase">Shop Icon</h1>
                     <MenuIcon className="w-8 h-8 cursor-pointer" onClick={handleOpen} />
