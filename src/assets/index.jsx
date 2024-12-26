@@ -28,9 +28,9 @@ import Github from '@/assets/icons/github.svg';
 import Linkedin from '@/assets/icons/linkediin.svg';
 import Twitter from '@/assets/icons/twitter.svg';
 import Facebook from '@/assets/icons/facebook.svg';
-import AddCart from '@/assets/icons/addCart.svg';
+import SvgAddCart from '@/assets/icons/addCart.svg';
 import Start from '@/assets/icons/star.svg';
 
 export {
-    SvgUser, AddFiles, Start, AddCart, Github, Linkedin, Twitter, Facebook, Location, Mail, Telephone, OpenEye, Menu, Delete, Category, Customers, Download, Sort, Close, Pen, Upload, Select, Logout, SvgSearch, Notification, Hidden, Overview, Products, SvgShopping, Orders, Supplier, Bottom,
+    SvgUser, AddFiles, Start, SvgAddCart, Github, Linkedin, Twitter, Facebook, Location, Mail, Telephone, OpenEye, Menu, Delete, Category, Customers, Download, Sort, Close, Pen, Upload, Select, Logout, SvgSearch, Notification, Hidden, Overview, Products, SvgShopping, Orders, Supplier, Bottom,
 };

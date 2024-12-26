@@ -15,7 +15,7 @@ export default function Navbar({ className = "", openDrawer = () => { } }) {
     const pathName = usePathname();
 
     useEffect(() => {
-        gsap.to('.main-tool-bar', {
+        const animation = gsap.to('.main-tool-bar', {
             scrollTrigger: {
                 trigger: '.main-tool-bar',
                 start: 'top -80',
@@ -26,6 +26,12 @@ export default function Navbar({ className = "", openDrawer = () => { } }) {
                 },
             },
         });
+        return () => {
+            if (animation.scrollTrigger) {
+                animation.scrollTrigger.kill(); // Kill the ScrollTrigger instance
+            }
+            gsap.killTweensOf('.main-tool-bar'); // Clear any remaining tweens
+        };
     }, []);
 
     return (

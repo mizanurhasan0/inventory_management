@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import defaultImg from '@/assets/imgs/eshop.jpg';
 import { Delete } from '@/assets';
 import Img from '../img/Img';
@@ -43,7 +43,7 @@ export default function CartItems({ products = [], setCart = () => { } }) {
                         </td>
                         <td>
                             <div className="px-2">
-                                {obj.qty * obj.productId.price}
+                                {obj.qty * obj.productId.price || 0}
                             </div>
                         </td>
                     </tr>
