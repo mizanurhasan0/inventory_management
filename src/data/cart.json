@@ -1,0 +1,40 @@
+[
+    {
+        "id": 1,
+        "product": [
+            {
+                "productId": {
+                    "id": 1,
+                    "name": "Hat green shart black color",
+                    "price": 100
+                },
+                "qty": 2
+            },
+            {
+                "productId": {
+                    "id": 2,
+                    "name": "Mobile 14 pro",
+                    "price": 900
+                },
+                "qty": 1
+            },
+            {
+                "productId": {
+                    "id": 3,
+                    "name": "Yamaha FZS",
+                    "price": 1100
+                },
+                "qty": 4
+            },
+            {
+                "productId": {
+                    "id": 4,
+                    "name": "Macbook",
+                    "price": 2000
+                },
+                "qty": 8
+            }
+        ],
+        "createdAt": "2024-12-26T12:55:36.877Z"
+    }
+]
