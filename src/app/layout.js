@@ -2,7 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 // import Navbar from "@/components/navbar/Navbar";
 // import NavbarMbl from "@/components/navbar/NavbarMbl";
-// import NavComp from "./NavComp";
+import NavComp from "./NavComp";
 
 // import Drawer from "@/components/drawer/Drawer";
 // import Drawer2 from "@/components/drawer/Drawer2";
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
           <div className="">
             <h1>this is banner</h1>
           </div>
-          {/* <NavComp /> */}
+          <NavComp />
           <div>
             {children}
           </div>

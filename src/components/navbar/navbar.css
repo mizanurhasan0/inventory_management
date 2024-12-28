@@ -1,6 +1,6 @@
 .main-tool-bar {
-	background: #f7f7f7;
-	color: #0e100f;
+	/* background: #f7f7f7; */
+	color: #ffff;
 	/* background-color: rgba(231, 25, 25, 0.9); Optional */
 	transition: ease 0.4s ;
 	z-index: 99999;
