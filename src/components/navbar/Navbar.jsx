@@ -10,35 +10,27 @@ import "./navbar.css";
 import Menus from "./data";
 
 export default function Navbar({ className = "", openDrawer = () => { } }) {
+
     gsap.registerPlugin(ScrollTrigger);
     const { push } = useRouter();
     const pathName = usePathname();
 
     useEffect(() => {
-        const animation = gsap.to('.main-tool-bar', {
-            scrollTrigger: {
-                trigger: '.main-tool-bar',
-                start: 'top -80',
-                end: '99999',
-                toggleClass: {
-                    className: 'main-tool-bar--scrolled',
-                    targets: '.main-tool-bar'
-                },
-            },
+        ScrollTrigger.create({
+            trigger: '.main-tool-bar',
+            start: 'top-80px',
+            end: '99999',
+            onEnter: () => document.querySelector('.main-tool-bar').classList.add('main-tool-bar--scrolled'),
+            onLeaveBack: () => document.querySelector('.main-tool-bar').classList.remove('main-tool-bar--scrolled'),
         });
-        return () => {
-            if (animation.scrollTrigger) {
-                animation.scrollTrigger.kill(); // Kill the ScrollTrigger instance
-            }
-            gsap.killTweensOf('.main-tool-bar'); // Clear any remaining tweens
-        };
+
     }, []);
 
     return (
         <div className={`${className} main-tool-bar w-full sticky left-0 top-0 h-20`}>
             <div className="flex items-center justify-between w-full container mx-auto">
                 <div className="cursor-pointer" onClick={() => push('/')}>
-                    <Img src={"/default.svg"} />
+                    <Img src={"/default.svg"} className="w-4 h-4" />
                 </div>
                 <div className="flex items-center space-x-4">
                     {Menus.map((m, i) => (

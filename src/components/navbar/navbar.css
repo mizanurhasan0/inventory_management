@@ -1,13 +1,14 @@
 .main-tool-bar {
 	background: #f7f7f7;
 	color: #0e100f;
-	transition: ease 0.4s;
+	/* background-color: rgba(231, 25, 25, 0.9); Optional */
+	transition: ease 0.4s ;
 	z-index: 99999;
 
 }
 
 .main-tool-bar--scrolled {
-	height: 40px;
+	height: 50px;
 }
 
 /* Mobile */
