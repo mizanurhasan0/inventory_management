@@ -5,7 +5,7 @@ import Banner from '@/components/banner/Banner';
 export default function Home() {
 
     return (
-        <>
+        <div>
             <Banner />
             <div className="container mx-auto">
                 <h1 className="text-center text-4xl font-semibold py-10">Welcome, Mizan!</h1>
@@ -18,6 +18,6 @@ export default function Home() {
                     ))}
                 </div>
             </div>
-        </>
+        </div>
     )
 }

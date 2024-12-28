@@ -1,6 +1,30 @@
 [
     {
         "id": 1,
-        "image": ""
+        "image": "",
+        "header": "The New Standard",
+        "subheader": "under favorable smartwatches",
+        "price": 700
+    },
+    {
+        "id": 2,
+        "image": "",
+        "header": "The  Standard",
+        "subheader": "under favorable smartwatches",
+        "price": 600
+    },
+    {
+        "id": 3,
+        "image": "",
+        "header": "The New Standard",
+        "subheader": "under favorable smartwatches",
+        "price": 800
+    },
+    {
+        "id": 4,
+        "image": "",
+        "header": "The regular Standard",
+        "subheader": "under favorable smartwatches",
+        "price": 900
     }
 ]
