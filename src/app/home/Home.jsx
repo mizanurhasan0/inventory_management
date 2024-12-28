@@ -1,12 +1,16 @@
 import React from 'react';
 import ProductCard from '@/components/card/ProductCard';
 import Banner from '@/components/banner/Banner';
+import Category from './comp/Category';
 
 export default function Home() {
 
     return (
         <div className="py-5">
             <Banner />
+            <div>
+                <Category />
+            </div>
             <div className="container mx-auto">
                 <h1 className="text-center text-4xl font-semibold py-10">Welcome, Mizan!</h1>
 
@@ -17,6 +21,7 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
+
             </div>
         </div>
     )
