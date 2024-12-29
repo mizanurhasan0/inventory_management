@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Btn from '../btn/Btn'
 import Image from 'next/image'
 
@@ -24,7 +24,7 @@ export default function BannerCard({ obj }) {
 
             </div>
             <div className="relative flex items-center justify-end  h-full ">
-                <Image priority src='/banner/elec.png' fill alt="banner image" />
+                <Image priority src={obj?.image} fill alt="banner image" />
             </div>
         </div>
     )

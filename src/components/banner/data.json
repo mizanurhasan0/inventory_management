@@ -1,28 +1,28 @@
 [
     {
         "id": 1,
-        "image": "",
+        "image": "/banner/banner1.webp",
         "header": "The New Standard",
         "subheader": "under favorable smartwatches",
         "price": 700
     },
     {
         "id": 2,
-        "image": "",
+        "image": "/banner/elec.png",
         "header": "The  Standard",
         "subheader": "under favorable smartwatches",
         "price": 600
     },
     {
         "id": 3,
-        "image": "",
+        "image": "/banner/elec2.png",
         "header": "The New Standard",
         "subheader": "under favorable smartwatches",
         "price": 800
     },
     {
         "id": 4,
-        "image": "",
+        "image": "/banner/elec3.png",
         "header": "The regular Standard",
         "subheader": "under favorable smartwatches",
         "price": 900

@@ -13,7 +13,7 @@ export default function Banner() {
         <div className="bg-gradient-to-r from-teal-100 via-teal-50 to-teal-100">
             <div className="container relative w-full mx-auto">
                 {/* Carousel Container */}
-                <div className=" overflow-hidden relative ">
+                <div className=" overflow-hidden relative">
                     <div
                         className="h-[420px] flex transition-transform duration-500"
                         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
