@@ -13,7 +13,7 @@ const runCommand = (command) => {
                 console.error(`❌ Error: ${stderr}`);
                 rej(stderr);
             } else {
-                console.log(`✅ ${stdout}`);
+                console.log(`✅ ${stdout}`); ""
                 res(stdout);
             }
         });
