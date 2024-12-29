@@ -1,4 +1,3 @@
-const { rejects } = require('assert');
 const { exec } = require('child_process');
 
 const commitMessage = process.argv[2];
