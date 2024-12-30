@@ -6,7 +6,7 @@ import Suggestion from './components/Suggestion';
 
 export default function page() {
     return (
-        <div className="">
+        <div>
             <div className="mx-auto container grid grid-cols-2 gap-4 py-8">
                 <Gallary />
                 <ShortDetails />

@@ -1,18 +1,17 @@
 import React from 'react';
 // import { AddCart, Shopping } from '@/assets';
-import Btn from '@/components/btn/Btn';
 import Qty from '@/components/quantity/Qty';
 
 export default function ShortDetails() {
     return (
         <div className="space-y-4">
             <div>
-                <h1 className="text-3xl capitalize font-TT">Hoodie For Windter</h1>
-                <p className="text-xs text-base6 lowercase font-bold">&#10003; Premium</p>
+                <h1 className="text-3xl capitalize text-green_base">Hoodie For Windter</h1>
+                <p className="text-xs text-base6 lowercase font-bold">&#10003; Tablets</p>
             </div>
-            <div className="flex items-center space-x-4">
-                <p className="font-semibold text-xl">$44.00</p>
-                <p className="line-through text-xs opacity-50">$55.00</p>
+            <div className="flex items-center space-x-4 border-b pb-1">
+                <p className="font-semibold text-xl">44.00 tk</p>
+                <p className="line-through text-xs opacity-50">$55.00 tk</p>
             </div>
             <div>
                 <p className="pb-2">Size</p>
@@ -34,18 +33,17 @@ export default function ShortDetails() {
                 <Qty />
             </div>
             <div className="flex space-x-4">
-                <Btn>
-                    <div className="flex items-center justify-center space-x-2 font-medium">
-                        {/* <AddCart className="w-6 h-6 fill-white" /> */}
-                        <p>Add to cart</p>
-                    </div>
-                </Btn>
-                <Btn className="bg-transparent border border-base3 text-base6">
-                    <div className="flex items-center justify-center space-x-2 font-medium">
-                        {/* <Shopping className="w-6 h-6" /> */}
-                        <p> Buy Now</p>
-                    </div>
-                </Btn>
+
+                <div className="flex items-center justify-center space-x-2 font-medium">
+                    {/* <AddCart className="w-6 h-6 fill-white" /> */}
+                    <p>Add to cart</p>
+                </div>
+
+
+                <div className="flex items-center justify-center space-x-2 font-medium">
+                    {/* <Shopping className="w-6 h-6" /> */}
+                    <p> Buy Now</p>
+                </div>
             </div>
         </div>
     )
