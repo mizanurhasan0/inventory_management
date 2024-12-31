@@ -22,15 +22,17 @@ import Menu from '@/assets/icons/Menu.svg';
 import Delete from '@/assets/icons/delete.svg';
 import OpenEye from '@/assets/icons/openeye.svg';
 import Location from '@/assets/icons/location.svg';
-import Telephone from '@/assets/icons/telephone.svg';
-import Mail from '@/assets/icons/mail.svg';
+import TelephoneSvg from '@/assets/icons/telephone.svg';
+import MailSvg from '@/assets/icons/mail.svg';
 import Github from '@/assets/icons/github.svg';
 import Linkedin from '@/assets/icons/linkediin.svg';
-import Twitter from '@/assets/icons/twitter.svg';
-import Facebook from '@/assets/icons/facebook.svg';
+import TwitterSvg from '@/assets/icons/twitter.svg';
+import FacebookSvg from '@/assets/icons/facebook.svg';
 import SvgAddCart from '@/assets/icons/addCart.svg';
 import Start from '@/assets/icons/star.svg';
+import InfoSvg from "@/assets/icons/info.svg";
+
 
 export {
-    SvgUser, AddFiles, Start, SvgAddCart, Github, Linkedin, Twitter, Facebook, Location, Mail, Telephone, OpenEye, Menu, Delete, Category, Customers, Download, Sort, Close, Pen, Upload, Select, Logout, SvgSearch, Notification, Hidden, Overview, Products, SvgShopping, Orders, Supplier, Bottom,
+    SvgUser, InfoSvg, AddFiles, Start, SvgAddCart, Github, Linkedin, TwitterSvg, FacebookSvg, Location, MailSvg, TelephoneSvg, OpenEye, Menu, Delete, Category, Customers, Download, Sort, Close, Pen, Upload, Select, Logout, SvgSearch, Notification, Hidden, Overview, Products, SvgShopping, Orders, Supplier, Bottom,
 };

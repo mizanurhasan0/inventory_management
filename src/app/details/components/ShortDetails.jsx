@@ -1,6 +1,7 @@
 import React from 'react';
 // import { AddCart, Shopping } from '@/assets';
 import Qty from '@/components/quantity/Qty';
+import Btn from '@/components/btn/Btn';
 
 export default function ShortDetails() {
     return (
@@ -34,16 +35,16 @@ export default function ShortDetails() {
             </div>
             <div className="flex space-x-4">
 
-                <div className="flex items-center justify-center space-x-2 font-medium">
+                <Btn className="bg-green_base text-white">
                     {/* <AddCart className="w-6 h-6 fill-white" /> */}
-                    <p>Add to cart</p>
-                </div>
+                    Add to cart
+                </Btn>
 
 
-                <div className="flex items-center justify-center space-x-2 font-medium">
+                <Btn className="">
                     {/* <Shopping className="w-6 h-6" /> */}
-                    <p> Buy Now</p>
-                </div>
+                    Buy Now
+                </Btn>
             </div>
         </div>
     )

@@ -27,7 +27,7 @@ export default function Navbar({ className = "", openDrawer = () => { } }) {
     }, []);
 
     return (
-        <div className={`${className} main-tool-bar bg-gradient-to-r from-teal-700 via-teal-600 to-teal-700 w-full sticky left-0 top-0 h-20`}>
+        <div className={`${className} main-tool-bar bg-gradient-to-r from-teal-700 via-teal-600 to-teal-700 w-full sticky left-0 top-0 h-20 z-10`}>
             <div className="flex items-center justify-between w-full container mx-auto">
                 <div className="cursor-pointer" onClick={() => push('/')}>
                     <Img src={"/default.svg"} className="w-4 h-4" />

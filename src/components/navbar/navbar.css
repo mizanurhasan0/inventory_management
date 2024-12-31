@@ -3,7 +3,7 @@
 	color: #ffff;
 	/* background-color: rgba(231, 25, 25, 0.9); Optional */
 	transition: ease 0.4s ;
-	z-index: 99999;
+	/* z-index: 99999; */
 
 }
 
@@ -53,7 +53,6 @@
 	transition: transform .5s ease;
 	transform: scaleX(0);
 }
-
 
 .navCustomCss ul li a:hover:after {
 	transform: scaleX(1);

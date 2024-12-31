@@ -29,8 +29,8 @@ export default function Drawer({ ref }) {
     }, []);
 
     return (
-        <div ref={ref} className="drawer fixed top-0 right-[0%] w-80 h-screen z-50 bg-white transform   
-             translate-x-full">
+        <div ref={ref} className="drawer fixed top-0 right-[0%] w-80 h-screen bg-white transform   
+             translate-x-full z-50">
             <div className="flex flex-col h-full">
                 {/* 1st part */}
                 <div className="flex justify-between p-2">

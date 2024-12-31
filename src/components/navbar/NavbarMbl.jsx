@@ -29,22 +29,23 @@ export default function NavbarMbl({ className = '' }) {
     };
 
     const handleClose = () => {
+        console.log('hit');
         tl.current.reverse();
     };
 
     return (
         <div className={`${className}`}>
-            <div className="main-tool-bar fixed top-0 left-0 right-0 h-20 flex" >
+            <div className="main-tool-bar fixed top-0 left-0 right-0 h-20 flex z-10" >
                 <div className="flex items-center justify-between container mx-auto">
                     <h1 className="font-semibold uppercase">Shop Icon</h1>
                     <MenuIcon className="w-8 h-8 cursor-pointer" onClick={handleOpen} />
                 </div>
             </div>
 
-            <nav ref={navRef} className="navCustomCss absolute w-full bg-black right-[100vw] h-4">
+            <nav ref={navRef} className="navCustomCss absolute w-full bg-black right-[100vw] h-4 z-50">
                 <div className="absolute mx-auto container left-0 right-0 top-10 flex text-white justify-between">
                     <h1 className="font-semibold uppercase text-2xl">Shop Icon</h1>
-                    <CloseIcon onClick={handleClose} className="w-6 h-6 cursor-pointer" />
+                    <CloseIcon onClick={handleClose} className="w-6 h-6 cursor-pointer z-20" />
                 </div>
                 <ul className="flex flex-col items-center justify-center gap-5 h-screen">
                     {Menu.map((item, k) => (
